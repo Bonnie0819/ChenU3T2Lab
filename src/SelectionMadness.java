@@ -44,6 +44,34 @@ public class SelectionMadness
        of the three?
      */
     public boolean rightTriangle(int side1, int side2, int side3) {
+        int greatest = largest(side1, side2, side3);
+        double a2;
+        double b2;
+        double c2;
+        //checks to see if side1 is the greatest
+        if(greatest != side1) {
+            a2 = Math.pow(side1, 2);
+        } else {
+            c2 = Math.pow(greatest, 2);
+        }
+        //checks to see if side 2 is the greatest
+        if(greatest != side2) {
+            b2 = Math.pow(side2, 2);
+        } else {
+            c2 = Math.pow(greatest, 2);
+        }
+        // checks to see if side 3 is the greatest
+        if(greatest != side3) {
+            b2 = Math.pow(side3, 2);
+        } else {
+            c2 = Math.pow(greatest, 2);
+        }
+
+        if(a2 + b2 == c2){
+            return true;
+        }
+
+
         return true;
     }
 
