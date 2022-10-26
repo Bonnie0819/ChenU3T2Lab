@@ -11,8 +11,8 @@ public class SelectionMadness
        time and false (tails) 50% of the time, on average.
      */
     public boolean flipCoin() {
-        int num = (int) (Math.random() * 1) + 1;
-        if (num == 1) {
+        int num = (int) (Math.random() * 10) + 10;
+        if (num <= 10) {
             return false;
         } else {
             return true;
@@ -45,34 +45,30 @@ public class SelectionMadness
      */
     public boolean rightTriangle(int side1, int side2, int side3) {
         int greatest = largest(side1, side2, side3);
-        double a2;
-        double b2;
-        double c2;
+        double a2 = Math.pow(side1, 2);
+        double b2 = Math.pow(side2, 2);
+        double c2 = Math.pow(side3, 2);
         //checks to see if side1 is the greatest
-        if(greatest != side1) {
-            a2 = Math.pow(side1, 2);
-        } else {
-            c2 = Math.pow(greatest, 2);
+        if(greatest == side1) {
+            a2 = Math.pow(side2, 2);
+            b2 = Math.pow(side3, 2);
+            c2 = Math.pow(side1, 2);
         }
         //checks to see if side 2 is the greatest
-        if(greatest != side2) {
-            b2 = Math.pow(side2, 2);
-        } else {
-            c2 = Math.pow(greatest, 2);
-        }
-        // checks to see if side 3 is the greatest
-        if(greatest != side3) {
+        if(greatest == side2) {
+            a2 = Math.pow(side1, 2);
             b2 = Math.pow(side3, 2);
-        } else {
-            c2 = Math.pow(greatest, 2);
+            c2 = Math.pow(side2, 2);
         }
 
         if(a2 + b2 == c2){
             return true;
+        } else {
+            return false;
         }
 
 
-        return true;
+
     }
 
 }
