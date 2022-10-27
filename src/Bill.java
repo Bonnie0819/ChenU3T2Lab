@@ -28,7 +28,21 @@ public class Bill {
 
    */
     public boolean addTip() {
-        return false;
+        if(tipAdded){
+            return false;
+        } else {
+            if(customers >= 8) {
+                totalCost += totalCost * .30;
+            }else if(customers >= 4) {
+                totalCost += totalCost * .27;
+            }else if(customers >= 2) {
+                totalCost += totalCost * .25;
+            } else {
+                totalCost += totalCost * .20;
+            }
+            tipAdded = true;
+            return true;
+        }
     }
 
     /* Returns String with info about the bill */
