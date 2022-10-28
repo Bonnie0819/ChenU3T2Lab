@@ -2,20 +2,7 @@ public class CatHouseRunner
 {
     public static void main(String[] args)
     {
-        // here is some that will run right away, just to play around
-        // (make sure to compile both your Cat and Cathouse classes first!)
-        Cat daisy = new Cat("Daisy", 3);
-        Cat eleanor = new Cat("Eleanor", 8);
 
-        CatHouse cats = new CatHouse(daisy, eleanor, "Max");
-
-        // print CatHouse info
-        System.out.println(cats);
-
-        cats.rollCall();
-
-        // HERE IS TEST CODE; UNCOMMENT WHEN YOU NEED IT!
- /*
     // ------- Test set 1 -------
     Cat garfield = new Cat("Garfield", 5);
     Cat crookshanks = new Cat("Crookshanks", 6);
@@ -67,7 +54,7 @@ public class CatHouseRunner
 
     // ------- Test set 4 -------
     Cat autumn1 = new Cat("Autumn", 15);
-    Cat autumn2 = new Cat("Autumn", 15);
+    Cat autumn2 = new Cat("Cathy", 15);
 
     CatHouse sameCats = new CatHouse(autumn1, autumn2, "ASPCA");
 
@@ -80,6 +67,6 @@ public class CatHouseRunner
 
     sameCats.catNoise();
 
-    */
+
     }
 }
